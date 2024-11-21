@@ -1,6 +1,6 @@
 // src/components/IngredientList.jsx
 
-import { availableIngredients } from "../App";
+// import { availableIngredients } from "../App";
 
 const IngredientList = ({ availableIngredients, addToBurger}) => {
     return (

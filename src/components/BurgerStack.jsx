@@ -1,7 +1,19 @@
 // `src/components/BurgerStack.jsx`
-const BurgerStack = (props) => {
-    return <ul>none.. yet</ul>;
-  };
-  
-  export default BurgerStack;
-  
+
+import { useState } from 'react'
+
+
+const BurgerStack = ({ ingredients, removeFromBurger }) => {
+  return (
+    <ul>
+      {ingredients.map((ingredient, idx) => (
+        <li key={idx} style={{ backgroundColor: ingredient.color }}>
+          {ingredient.name}
+          <button onClick= {() => removeFromBurger(idx)}>x</button>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+export default BurgerStack;
